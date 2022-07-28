@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Map Router</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=API_KEY" type="text/javascript"></script>
+    <script src="animated_line.js" type="text/javascript"></script>
+    <script src="app.js"></script>
+</head>
+
+<body>
+    <div class="main">
+        <div class="tools">
+            <div class="btngroup">
+            <button type="button" class="draw" onclick="drawRoute()">Нарисовать</button>
+            <button type="button" class="test" onclick="test()">Тестовые координаты</button>
+            <button type="button" class="reset" onclick="resetCoords()">Сброс</button>
+            </div>
+            
+            <div style="display: flex; ">
+            <input type="text" id="coordinates" style="margin-bottom: 20px;" placeholder="Координаты">
+            <button type="button" class="add" onclick="addCoords()">Добавить точку</button>
+            </div>
+            <ul id="coordList"></ul>
+        </div>
+        <div id="map"></div>
+    </div>
+</body>
+</html>
